@@ -218,8 +218,20 @@
             }
         }
 
+        @keyframes red-pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+        }
+
         .link-card.cyan { border-color: #22d3ee; }
-        .link-card.red { border-color: #ef4444; }
+        .link-card.red {
+            border-color: #ef4444;
+            animation: red-pulse 0.7s infinite;
+        }
+        .link-card.red:hover {
+            animation-play-state: paused;
+        }
         .link-card.green { border-color: #22c55e; }
         .link-card.yellow { border-color: #eab308; }
         .link-card.purple { border-color: #a855f7; }
